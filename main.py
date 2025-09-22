@@ -4,16 +4,19 @@ import logging
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums.parse_mode import ParseMode
+from config.config import API_TOKEN
+from handlers.init import register_handlers
 
-TOKEN = ('8256805328:AAFVX32vd17WOs2ddtQoIvEfRFQ6F95aNio')
-CHANNEL_ID = '-1003081059373'
+TOKEN = (API_TOKEN)
 
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
+
 async def main():
+    register_handlers(dp)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
