@@ -5,8 +5,8 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums.parse_mode import ParseMode
 
-TOKEN = ('8256805328:AAFVX32vd17WOs2ddtQoIvEfRFQ6F95aNio')
-CHANNEL_ID = '-1003081059373'
+TOKEN = ('')
+CHANNEL_ID = ''
 
 logging.basicConfig(level=logging.INFO)
 
